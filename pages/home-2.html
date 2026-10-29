@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Combat &amp; Athletic Lab · Mr Fit Bangalore</title>
+  <meta name="description"
+    content="Mr Fit Combat &amp; Athletic Performance Lab. Specialized in Muay Thai, boxing, MMA, and raw barbell power." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../assets/logo.png" />
+</head>
+
+<body class="page-public">
+
+  <!-- ============== SHARED NAVBAR ============== -->
+  <header class="hdr">
+    <div class="hdr__row">
+      <a class="hdr__brand" href="../index.html">
+        <span class="hdr__mark">
+          <img src="../assets/logo.png" alt="Mr Fit Logo" />
+        </span>
+        <span class="hdr__name">MR FIT</span>
+      </a>
+
+      <nav class="hdr__nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="home-2.html" class="is-active">Home 2</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="hdr__cta">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle Theme" title="Switch Light/Dark Mode"><i class="fa-solid fa-sun"></i></button>
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch LTR/RTL">RTL</button>
+
+        <!-- Portal Primary CTA -->
+        <div class="portal-dropdown-wrap profile-dropdown-wrap">
+          <a href="../auth/login.html" class="btn btn--sm btn--portal" aria-label="Access Member and Staff Portals" title="Member &amp; Admin Portals">Portal</a>
+          <div class="profile-menu">
+            <div class="profile-menu__header">
+              <b>Mr Fit Portals</b>
+              <span>Member &amp; Management Access</span>
+            </div>
+            <ul class="profile-menu__links">
+              <li><a href="../auth/login.html"><i class="fa-solid fa-arrow-right-to-bracket text-orange-500"></i><span>Member Login</span></a></li>
+              <li><a href="../auth/signup.html"><i class="fa-solid fa-user-plus text-amber-400"></i><span>Join / Signup</span><span class="profile-menu__badge">Trial</span></a></li>
+              <li><a href="../auth/user/user-dashboard.html"><i class="fa-solid fa-id-card text-emerald-400"></i><span>User Dashboard</span><span class="profile-menu__badge bg-emerald-600">Member</span></a></li>
+              <li><a href="../auth/admin/admin-dashboard.html"><i class="fa-solid fa-shield-halved text-rose-400"></i><span>Admin Dashboard</span><span class="profile-menu__badge bg-rose-600">Staff</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="hdr__burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <a class="hdr__brand mobile-nav-brand" href="../index.html">
+        <span class="hdr__mark">
+          <img src="../assets/logo.png" alt="Mr Fit Logo" />
+        </span>
+        <span class="hdr__name">MR FIT</span>
+      </a>
+      <button class="mobile-nav-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="../index.html">Home</a>
+      <a href="home-2.html" class="is-active">Home 2</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+
+  <!-- ============== HERO — CINEMATIC ATHLETIC LAB (ELECTRIC BLUE THEME) ============== -->
+  <section id="home" class="hero-blue-theme">
+
+    <!-- Subtle grain texture overlay -->
+    <div aria-hidden="true" style="
+      position: absolute; inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 stitchTiles=%22stitch%22/></filter><rect width=%22200%22 height=%22200%22 filter=%22url(%23n)%22 opacity=%220.06%22/></svg>');
+      pointer-events: none; z-index: 0;
+    "></div>
+
+    <!-- Radiant lighting overlay behind headline -->
+    <div aria-hidden="true" style="
+      position: absolute;
+      top: 30%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 900px; height: 500px;
+      background: radial-gradient(ellipse, rgba(14, 121, 178, 0.45) 0%, transparent 70%);
+      pointer-events: none; z-index: 0;
+    "></div>
+
+    <!-- Main hero content -->
+    <div class="hero-blue-theme__inner" style="align-items: center; text-align: center;">
+
+      <!-- Eyebrow badge -->
+      <div style="
+        display: inline-flex; align-items: center; gap: 8px;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        color: #ffffff;
+        font-family: var(--ff-head); font-size: 11px;
+        padding: 7px 20px; border-radius: 999px;
+        text-transform: uppercase; letter-spacing: .14em;
+        margin-bottom: 36px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      ">
+        <i class="fa-solid fa-bolt" style="color: #d0eaf8;"></i>
+        <span>Outdoor Athletic Performance Bootcamp · Mr Fit</span>
+      </div>
+
+      <!-- Massive headline -->
+      <h1 style="
+        font-family: var(--ff-display);
+        font-size: clamp(2.5rem, 12vw, 7rem);
+        line-height: .92;
+        letter-spacing: -.02em;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin: 0 0 32px;
+        max-width: 1300px;
+        text-shadow: 0 4px 30px rgba(0,0,0,0.35);
+      ">
+        UNLEASH YOUR<br />OUTDOOR POWER.
+      </h1>
+
+      <!-- Subtitle -->
+      <p style="
+        font-size: clamp(15px, 2vw, 18px);
+        color: rgba(255, 255, 255, 0.95);
+        max-width: 58ch;
+        line-height: 1.65;
+        margin: 0 0 44px;
+        font-weight: 500;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      ">
+        At Mr Fit, we trade indoor walls for open skies. Experience high-octane bootcamps, Olympic-level conditioning, and certified coaching designed to forge real functional athleticism.
+      </p>
+
+      <!-- CTA row -->
+      <div style="display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;">
+        <a href="schedule.html" style="
+          display: inline-flex; align-items: center; gap: 10px;
+          background: var(--navy); color: #ffffff;
+          font-family: var(--ff-head); font-size: 14px;
+          text-transform: uppercase; letter-spacing: .06em;
+          padding: 16px 38px; border-radius: 999px;
+          text-decoration: none; font-weight: 800;
+          transition: transform .15s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+          border: 2px solid var(--navy);
+          box-shadow: 0 8px 24px rgba(25, 25, 35, 0.35);
+        " onmouseover="this.style.background='#ffffff';this.style.color='var(--navy)';this.style.borderColor='#ffffff';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--navy)';this.style.color='#ffffff';this.style.borderColor='var(--navy)';this.style.transform='translateY(0)';">
+          View Schedule
+        </a>
+        <a href="membership.html" style="
+          display: inline-flex; align-items: center; gap: 10px;
+          background: rgba(255,255,255,0.18); color: #ffffff;
+          backdrop-filter: blur(8px);
+          font-family: var(--ff-head); font-size: 14px;
+          text-transform: uppercase; letter-spacing: .06em;
+          padding: 16px 38px; border-radius: 999px;
+          text-decoration: none; font-weight: 800;
+          transition: transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease;
+          border: 2px solid rgba(255,255,255,0.85);
+        " onmouseover="this.style.background='#ffffff';this.style.color='var(--blue)';this.style.borderColor='#ffffff';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='rgba(255,255,255,0.18)';this.style.color='#ffffff';this.style.borderColor='rgba(255,255,255,0.85)';this.style.transform='translateY(0)';">
+          Start Free Trial
+        </a>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div style="margin-top: 52px; display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: .85;">
+        <span style="font-family: var(--ff-head); font-size: 10px; color: #ffffff; letter-spacing: .16em; text-transform: uppercase; font-weight: bold;">Scroll</span>
+        <div style="width: 2px; height: 38px; background: linear-gradient(to bottom, #d0eaf8, transparent);"></div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <!-- ============== ADVANTAGE / HIGHLIGHTS ============== -->
+  <section class="section">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow">THE LAB ADVANTAGE</p>
+        <h2>Combat &amp; Power Hardware.</h2>
+      </div>
+    </div>
+
+    <div class="services" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+      <article class="svc">
+        <div class="svc__body">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--orange-lt); color: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 20px;">
+            <i class="fa-solid fa-ring"></i>
+          </div>
+          <h3>16FT Regulation Octagon</h3>
+          <p>Train cage takedown defense, wall walking, and clinch control inside our full-spec competition cage.</p>
+          <ul class="svc__list">
+            <li><b>Rails</b><i>Seamless vinyl safety pads</i></li>
+            <li><b>Mats</b><i>Tatami wrestling subfloor</i></li>
+            <li><b>Sparring</b><i>Tue / Thu 7:30 PM</i></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc">
+        <div class="svc__body">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--orange-lt); color: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 20px;">
+            <i class="fa-solid fa-stopwatch-20"></i>
+          </div>
+          <h3>Laser Speed &amp; Turf Track</h3>
+          <p>30-meter indoor sprint strip with electronic timing gates to measure 10m acceleration, COD, and sled velocity.</p>
+          <ul class="svc__list">
+            <li><b>Hardware</b><i>Dual Rogue Dog Sleds</i></li>
+            <li><b>Timing</b><i>Micro-second optical array</i></li>
+            <li><b>Focus</b><i>First-step acceleration</i></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc">
+        <div class="svc__body">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--orange-lt); color: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 20px;">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3>Anaerobic Engine Lab</h3>
+          <p>Target anaerobic lactic tolerance with Concept2 Rowers, SkiErgs, and Rogue Echo AirBikes in structured 3-minute combat rounds.</p>
+          <ul class="svc__list">
+            <li><b>Intensity</b><i>800+ kcal per session</i></li>
+            <li><b>Telemetry</b><i>Real-time heart rate zones</i></li>
+            <li><b>Rounds</b><i>3-minute championship pace</i></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============== COMBAT DISCIPLINES & PATHWAYS ============== -->
+  <section class="section">
+    <div class="section__head section__head--center">
+      <div>
+        <p class="eyebrow">TRAINING DISCIPLINES</p>
+        <h2>Specialized Combat Pathways.</h2>
+        <p style="max-width: 640px; margin: 0 auto; color: var(--gray);">
+          Whether you are stepping into the cage for the first time or dialing in championship-grade striking, choose your track.
+        </p>
+      </div>
+    </div>
+
+    <div class="services" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+      <article class="svc">
+        <div class="svc__body">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--orange-lt); color: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 20px;">
+            <i class="fa-solid fa-hand-fist"></i>
+          </div>
+          <h3>Muay Thai &amp; Striking</h3>
+          <p>Master the art of 8 limbs. Clinch leverage, roundhouse power, knee strikes, and high-guard defensive shells.</p>
+          <ul class="svc__list">
+            <li><b>Curriculum</b><i>8-Point Striking System</i></li>
+            <li><b>Sparring</b><i>Controlled 16oz rounds</i></li>
+            <li><b>Target</b><i>Cardio &amp; striking power</i></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc">
+        <div class="svc__body">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--orange-lt); color: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 20px;">
+            <i class="fa-solid fa-mitten"></i>
+          </div>
+          <h3>Sweet Science Boxing</h3>
+          <p>Crisp jab mechanics, slip angles, shoulder rolls, and high-output heavy bag combinations for explosive agility.</p>
+          <ul class="svc__list">
+            <li><b>Focus</b><i>Head movement &amp; pivots</i></li>
+            <li><b>Mitt Work</b><i>1-on-1 coach pad rounds</i></li>
+            <li><b>Finisher</b><i>Cadence speed drills</i></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc">
+        <div class="svc__body">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--orange-lt); color: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 20px;">
+            <i class="fa-solid fa-person-falling"></i>
+          </div>
+          <h3>MMA Cage &amp; Grappling</h3>
+          <p>Level changes, double-leg setups, tatami submission control, and wall walking inside our full-spec regulation octagon.</p>
+          <ul class="svc__list">
+            <li><b>Floor</b><i>Shock-absorbing tatami</i></li>
+            <li><b>Cage</b><i>Reinforced safety mesh</i></li>
+            <li><b>Technique</b><i>Grip breaks &amp; sweeps</i></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="svc">
+        <div class="svc__body">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--orange-lt); color: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 20px;">
+            <i class="fa-solid fa-dumbbell"></i>
+          </div>
+          <h3>Olympic &amp; Barbell Power</h3>
+          <p>Raw barbell triple extension, clean &amp; press, heavy deadlifts, and hip power designed to transfer into kinetic striking force.</p>
+          <ul class="svc__list">
+            <li><b>Rigs</b><i>Rogue Monster Racks</i></li>
+            <li><b>Bars</b><i>Texas Power &amp; Eleiko</i></li>
+            <li><b>Method</b><i>CSCS Periodized Cycles</i></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============== COMBAT TIMETABLE (WEEKLY DRILLS) ============== -->
+  <section class="section section--paper section--wide" id="weekly-drills">
+    <div class="section__head section__head--center">
+      <div>
+        <p class="eyebrow">WEEKLY DRILLS</p>
+        <h2>Fighter Schedule.</h2>
+        <p style="max-width: 640px; margin: 0 auto; color: var(--gray);">
+          Periodized combat arts, power striking, and tactical conditioning blocks led by active championship coaches.
+        </p>
+      </div>
+    </div>
+
+    <div class="drills-wrap">
+      <!-- Desktop Table View (>900px) -->
+      <div class="drills-table-container">
+        <table class="drills-table">
+          <thead>
+            <tr>
+              <th style="width: 70px;">Day</th>
+              <th>Discipline &amp; Focus</th>
+              <th>Morning Slot</th>
+              <th>Evening Slot</th>
+              <th>Lead Coach</th>
+              <th>Access Level</th>
+              <th>Status</th>
+              <th style="text-align: right;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="drill-day-badge">MON</span></td>
+              <td>
+                <div class="drill-focus-title">Boxing Fundamentals</div>
+                <div class="drill-focus-subtitle">Jab mechanics, foot pivots &amp; heavy bag stamina</div>
+              </td>
+              <td><span class="drill-time-slot"><i class="fa-regular fa-clock"></i> 07:00 – 08:00 AM</span></td>
+              <td><span class="drill-time-slot"><i class="fa-regular fa-clock"></i> 06:30 – 07:30 PM</span></td>
+              <td><span class="drill-coach-name">Elena Morti</span></td>
+              <td><span class="drill-level-tag">All Levels</span></td>
+              <td><span class="drill-status-pill">Available (8 Spots)</span></td>
+              <td style="text-align: right;"><a href="../auth/login.html" class="btn btn--sm">Book</a></td>
+            </tr>
+            <tr>
+              <td><span class="drill-day-badge">TUE</span></td>
+              <td>
+                <div class="drill-focus-title">Muay Thai Clinch &amp; Knees</div>
+                <div class="drill-focus-subtitle">Plum control, inside elbow defense &amp; wall sweeps</div>
+              </td>
+              <td><span class="drill-time-slot"><i class="fa-regular fa-clock"></i> 07:30 – 08:30 AM</span></td>
+              <td><span class="drill-time-slot"><i class="fa-regular fa-clock"></i> 07:30 – 08:30 PM</span></td>
+              <td><span class="drill-coach-name">Sara Gowda</span></td>
+              <td><span class="drill-level-tag">Intermediate</span></td>
+              <td><span class="drill-status-pill drill-status-pill--warn">Filling Fast (3 Spots)</span></td>
+              <td style="text-align: right;"><a href="../auth/login.html" class="btn btn--sm">Book</a></td>
+            </tr>
+            <tr>
+              <td><span class="drill-day-badge">WED</span></td>
+              <td>
+                <div class="drill-focus-title">Footwork &amp; Slip Angles</div>
+                <div class="drill-focus-subtitle">Head movement, pivot counters &amp; power mitts</div>
+              </td>
+              <td><span class="drill-time-slot"><i class="fa-regular fa-clock"></i> 07:00 – 08:00 AM</span></td>
+              <td><span class="drill-time-slot"><i class="fa-regular fa-clock"></i> 06:30 – 07:30 PM</span></td>
+              <td><span class="drill-coach-name">Vikram Rao</span></td>
+              <td><span class="drill-level-tag">All Levels</span></td>
+              <td><span class="drill-status-pill">Available (10 Spots)</span></td>
+              <td style="text-align: right;"><a href="../auth/login.html" class="btn btn--sm">Book</a></td>
+            </tr>
+            <tr>
+              <td><span class="drill-day-badge">THU</span></td>
+              <td>
+                <div class="drill-focus-title">Controlled Sparring Clinic</div>
+                <div class="drill-focus-subtitle">16oz glove rounds, referee-supervised tactical scenarios</div>
+              </td>
+              <td><span class="drill-time-slot"><i class="fa-regular fa-clock"></i> 08:00 – 09:00 AM</span></td>
+              <td><span class="drill-time-slot"><i class="fa-regular fa-clock"></i> 07:30 – 08:45 PM</span></td>
+              <td><span class="drill-coach-name">Sara Gowda</span></td>
+              <td><span class="drill-level-tag drill-level-inter--adv">Intermediate</span></td>
+              <td><span class="drill-status-pill drill-status-pill--warn">Gear Required</span></td>
+              <td style="text-align: right;"><a href="../auth/login.html" class="btn btn--sm">Book</a></td>
+            </tr>
+            <tr>
+              <td><span class="drill-day-badge">FRI</span></td>
+              <td>
+                <div class="drill-focus-title">MMA Ground Control</div>
+                <div class="drill-focus-subtitle">Cage wrestling takedowns, wall walk defense &amp; top control</div>
+              </td>
+              <td><span class="drill-time-slot"><i class="fa-regular fa-clock"></i> 07:00 – 08:00 AM</span></td>
+              <td><span class="drill-time-slot"><i class="fa-regular fa-clock"></i> 07:00 – 08:15 PM</span></td>
+              <td><span class="drill-coach-name">Vikram Rao</span></td>
+              <td><span class="drill-level-tag">All Levels</span></td>
+              <td><span class="drill-status-pill">Available (6 Spots)</span></td>
+              <td style="text-align: right;"><a href="../auth/login.html" class="btn btn--sm">Book</a></td>
+            </tr>
+            <tr>
+              <td><span class="drill-day-badge">SAT</span></td>
+              <td>
+                <div class="drill-focus-title">Open Mat &amp; Cage Rounds</div>
+                <div class="drill-focus-subtitle">Full facility access, sparring clinics &amp; coach supervision</div>
+              </td>
+              <td><span class="drill-time-slot"><i class="fa-regular fa-clock"></i> 08:00 – 10:30 AM</span></td>
+              <td><span class="drill-time-slot"><i class="fa-regular fa-clock"></i> 04:30 – 07:00 PM</span></td>
+              <td><span class="drill-coach-name">Full Faculty</span></td>
+              <td><span class="drill-level-tag">All Members</span></td>
+              <td><span class="drill-status-pill">Open Mat</span></td>
+              <td style="text-align: right;"><a href="../auth/login.html" class="btn btn--sm">Book</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tablet & Mobile Cards Grid (active at <=900px, specifically for 768px tablet) -->
+      <div class="drills-cards-grid">
+        <!-- Monday Card -->
+        <article class="drill-card">
+          <div class="drill-card__top">
+            <span class="drill-day-badge">MON</span>
+            <span class="drill-level-tag">All Levels</span>
+            <span class="drill-status-pill">8 Spots Open</span>
+          </div>
+          <div>
+            <h3 class="drill-card__title">Boxing Fundamentals</h3>
+            <p style="font-size: 13px; color: var(--gray); margin: 4px 0 0;">Jab mechanics, footwork pivots &amp; heavy bag stamina.</p>
+          </div>
+          <div class="drill-card__times">
+            <div class="drill-card__time-block">
+              <span>Morning Slot</span>
+              <strong><i class="fa-regular fa-clock"></i> 07:00 AM</strong>
+            </div>
+            <div class="drill-card__time-block">
+              <span>Evening Slot</span>
+              <strong><i class="fa-regular fa-clock"></i> 06:30 PM</strong>
+            </div>
+          </div>
+          <div class="drill-card__bottom">
+            <span style="font-size: 13px; font-weight: 700; color: var(--navy);"><i class="fa-solid fa-user-tie text-xs text-orange"></i> Elena Morti</span>
+            <a href="../auth/login.html" class="btn btn--sm">Book Slot</a>
+          </div>
+        </article>
+
+        <!-- Tuesday Card -->
+        <article class="drill-card">
+          <div class="drill-card__top">
+            <span class="drill-day-badge">TUE</span>
+            <span class="drill-level-tag">Intermediate</span>
+            <span class="drill-status-pill drill-status-pill--warn">Filling Fast</span>
+          </div>
+          <div>
+            <h3 class="drill-card__title">Muay Thai Clinch &amp; Knees</h3>
+            <p style="font-size: 13px; color: var(--gray); margin: 4px 0 0;">Plum control, inside elbow defense &amp; wall sweeps.</p>
+          </div>
+          <div class="drill-card__times">
+            <div class="drill-card__time-block">
+              <span>Morning Slot</span>
+              <strong><i class="fa-regular fa-clock"></i> 07:30 AM</strong>
+            </div>
+            <div class="drill-card__time-block">
+              <span>Evening Slot</span>
+              <strong><i class="fa-regular fa-clock"></i> 07:30 PM</strong>
+            </div>
+          </div>
+          <div class="drill-card__bottom">
+            <span style="font-size: 13px; font-weight: 700; color: var(--navy);"><i class="fa-solid fa-user-tie text-xs text-orange"></i> Sara Gowda</span>
+            <a href="../auth/login.html" class="btn btn--sm">Book Slot</a>
+          </div>
+        </article>
+
+        <!-- Wednesday Card -->
+        <article class="drill-card">
+          <div class="drill-card__top">
+            <span class="drill-day-badge">WED</span>
+            <span class="drill-level-tag">All Levels</span>
+            <span class="drill-status-pill">10 Spots Open</span>
+          </div>
+          <div>
+            <h3 class="drill-card__title">Footwork &amp; Slip Angles</h3>
+            <p style="font-size: 13px; color: var(--gray); margin: 4px 0 0;">Head movement, pivot counters &amp; power mitts.</p>
+          </div>
+          <div class="drill-card__times">
+            <div class="drill-card__time-block">
+              <span>Morning Slot</span>
+              <strong><i class="fa-regular fa-clock"></i> 07:00 AM</strong>
+            </div>
+            <div class="drill-card__time-block">
+              <span>Evening Slot</span>
+              <strong><i class="fa-regular fa-clock"></i> 06:30 PM</strong>
+            </div>
+          </div>
+          <div class="drill-card__bottom">
+            <span style="font-size: 13px; font-weight: 700; color: var(--navy);"><i class="fa-solid fa-user-tie text-xs text-orange"></i> Vikram Rao</span>
+            <a href="../auth/login.html" class="btn btn--sm">Book Slot</a>
+          </div>
+        </article>
+
+        <!-- Thursday Card -->
+        <article class="drill-card">
+          <div class="drill-card__top">
+            <span class="drill-day-badge">THU</span>
+            <span class="drill-level-tag drill-level-tag--adv">Advanced</span>
+            <span class="drill-status-pill drill-status-pill--warn">Gear Required</span>
+          </div>
+          <div>
+            <h3 class="drill-card__title">Controlled Sparring Clinic</h3>
+            <p style="font-size: 13px; color: var(--gray); margin: 4px 0 0;">16oz glove rounds, referee-supervised tactical scenarios.</p>
+          </div>
+          <div class="drill-card__times">
+            <div class="drill-card__time-block">
+              <span>Morning Slot</span>
+              <strong><i class="fa-regular fa-clock"></i> 08:00 AM</strong>
+            </div>
+            <div class="drill-card__time-block">
+              <span>Evening Slot</span>
+              <strong><i class="fa-regular fa-clock"></i> 07:30 PM</strong>
+            </div>
+          </div>
+          <div class="drill-card__bottom">
+            <span style="font-size: 13px; font-weight: 700; color: var(--navy);"><i class="fa-solid fa-user-tie text-xs text-orange"></i> Sara Gowda</span>
+            <a href="../auth/login.html" class="btn btn--sm">Book Slot</a>
+          </div>
+        </article>
+
+        <!-- Friday Card -->
+        <article class="drill-card">
+          <div class="drill-card__top">
+            <span class="drill-day-badge">FRI</span>
+            <span class="drill-level-tag">All Levels</span>
+            <span class="drill-status-pill">6 Spots Open</span>
+          </div>
+          <div>
+            <h3 class="drill-card__title">MMA Ground Control</h3>
+            <p style="font-size: 13px; color: var(--gray); margin: 4px 0 0;">Cage wrestling takedowns, wall walk defense &amp; top control.</p>
+          </div>
+          <div class="drill-card__times">
+            <div class="drill-card__time-block">
+              <span>Morning Slot</span>
+              <strong><i class="fa-regular fa-clock"></i> 07:00 AM</strong>
+            </div>
+            <div class="drill-card__time-block">
+              <span>Evening Slot</span>
+              <strong><i class="fa-regular fa-clock"></i> 07:00 PM</strong>
+            </div>
+          </div>
+          <div class="drill-card__bottom">
+            <span style="font-size: 13px; font-weight: 700; color: var(--navy);"><i class="fa-solid fa-user-tie text-xs text-orange"></i> Vikram Rao</span>
+            <a href="../auth/login.html" class="btn btn--sm">Book Slot</a>
+          </div>
+        </article>
+
+        <!-- Saturday Card -->
+        <article class="drill-card">
+          <div class="drill-card__top">
+            <span class="drill-day-badge">SAT</span>
+            <span class="drill-level-tag">All Members</span>
+            <span class="drill-status-pill">Open Mat</span>
+          </div>
+          <div>
+            <h3 class="drill-card__title">Open Mat &amp; Cage Rounds</h3>
+            <p style="font-size: 13px; color: var(--gray); margin: 4px 0 0;">Full facility access, sparring clinics &amp; coach supervision.</p>
+          </div>
+          <div class="drill-card__times">
+            <div class="drill-card__time-block">
+              <span>Morning Slot</span>
+              <strong><i class="fa-regular fa-clock"></i> 08:00 AM</strong>
+            </div>
+            <div class="drill-card__time-block">
+              <span>Evening Slot</span>
+              <strong><i class="fa-regular fa-clock"></i> 04:30 PM</strong>
+            </div>
+          </div>
+          <div class="drill-card__bottom">
+            <span style="font-size: 13px; font-weight: 700; color: var(--navy);"><i class="fa-solid fa-user-tie text-xs text-orange"></i> Full Faculty</span>
+            <a href="../auth/login.html" class="btn btn--sm">Book Slot</a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <p class="sched__cta" style="margin-top: 40px;"><a href="../auth/login.html" class="btn btn--outline btn--lg">Reserve Your Fighter Spot</a></p>
+  </section>
+
+  <!-- ============== THE FIGHTER PROTOCOL ============== -->
+  <section class="section section--wide" id="fighter-protocol">
+    <div class="section__head section__head--center">
+      <div>
+        <p class="eyebrow">OUR METHODOLOGY</p>
+        <h2>The Fighter Protocol.</h2>
+        <p style="max-width: 640px; margin: 0 auto; color: var(--gray);">
+          Four integrated phases designed to take lifters and beginners into complete physical conditioning.
+        </p>
+      </div>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <span class="step-card__num" style="color: #0b5f8a;">01</span>
+        <h3>Movement Screening</h3>
+        <p>Comprehensive mobility, joint range, and kinetic power testing before any athlete hits heavy sparring or maximum loads.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-card__num" style="color: #0b5f8a;">02</span>
+        <h3>Periodized S&amp;C</h3>
+        <p>Barbell mesocycles, sled sprints, and metabolic lactic conditioning to develop both explosive punching force and lung capacity.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-card__num" style="color: #0b5f8a;">03</span>
+        <h3>Supervised Combat</h3>
+        <p>Technical pad drills, cage wall tactics, and safety-first sparring clinics with certified referee coaching oversight.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-card__num" style="color: #0b5f8a;">04</span>
+        <h3>Thermal Recovery</h3>
+        <p>3°C cold plunge ice baths and dry cedar Finnish sauna protocols to suppress muscle soreness and accelerate recovery.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== MASTER COMBAT COACHES ============== -->
+  <section class="section">
+    <div class="section__head section__head--center">
+      <div>
+        <p class="eyebrow">FIGHT LAB COACHES</p>
+        <h2>People who held the belt.</h2>
+        <p style="max-width: 600px; margin: 0 auto; color: var(--gray);">
+          Coached by verified champions and certified CSCS strength specialists with decades of competition experience.
+        </p>
+      </div>
+    </div>
+
+    <div class="trainers">
+      <article class="trainer">
+        <div class="trainer__photo"><img src="../img/coach-2.jpg" alt="Coach Arjun Gowda" /></div>
+        <div class="trainer__info">
+          <h3 class="trainer__name">Sara Gowda</h3>
+          <span class="trainer__role">Head Striking Coach · Pro MMA</span>
+          <p class="trainer__bio">Professional mixed martial artist and Muay Thai medalist with 9 years coaching experience.</p>
+          <div class="trainer__spec">
+            <span>Muay Thai</span><span>Boxing</span><span>MMA Cage</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="trainer">
+        <div class="trainer__photo"><img src="../img/coach-1.jpg" alt="Coach Vikram Rao" /></div>
+        <div class="trainer__info">
+          <h3 class="trainer__name">Vikram Rao</h3>
+          <span class="trainer__role">Head of Strength · CSCS</span>
+          <p class="trainer__bio">11+ years coaching elite powerlifters and developing periodized mesocycle protocols.</p>
+          <div class="trainer__spec">
+            <span>Powerlifting</span><span>CSCS</span><span>Periodization</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="trainer">
+        <div class="trainer__photo"><img src="../img/coach-3.jpg" alt="Pradeep Kumar" /></div>
+        <div class="trainer__info">
+          <h3 class="trainer__name">Preethi Kumar</h3>
+          <span class="trainer__role">Sprint &amp; Plyometrics Lead</span>
+          <p class="trainer__bio">Former state athletics coach managing laser speed gates and multi-vector agility training.</p>
+          <div class="trainer__spec">
+            <span>Speed Turf</span><span>Plyometrics</span><span>Agility</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============== FIGHTER STORIES & TESTIMONIALS ============== -->
+  <section class="section section--paper section--wide" id="fighter-stories">
+    <div class="section__head section__head--center">
+      <div>
+        <p class="eyebrow">ATHLETE VOICES</p>
+        <h2>Proven in the Ring &amp; Rig.</h2>
+        <p style="max-width: 600px; margin: 0 auto; color: var(--gray);">
+          Hear from athletes who traded air-conditioned corporate desks for combat grit.
+        </p>
+      </div>
+    </div>
+
+    <div class="tests">
+      <article class="test">
+        <div class="test__stars">★★★★★</div>
+        <p class="test__quote">"Training in the 16ft cage with Coach Sara transformed my confidence. The technical striking guidance is unmatched anywhere in South India."</p>
+        <div class="test__person">
+          <div class="test__avatar"><img src="../img/coach-4.jpg" alt="Karthik N." /></div>
+          <div>
+            <b>Karthik N.</b>
+            <i>Member · Muay Thai &amp; Barbell</i>
+          </div>
+        </div>
+      </article>
+
+      <article class="test">
+        <div class="test__stars">★★★★★</div>
+        <p class="test__quote">"The sprint turf timing gates and barbell racks took my athletic power to new heights. Dropped 8% body fat in 16 weeks of structured drills."</p>
+        <div class="test__person">
+          <div class="test__avatar"><img src="../img/coach-5.jpg" alt="Aman Verma" /></div>
+          <div>
+            <b>Aman Verma</b>
+            <i>Member · Strength &amp; Conditioning</i>
+          </div>
+        </div>
+      </article>
+
+      <article class="test">
+        <div class="test__stars">★★★★★</div>
+        <p class="test__quote">"The contrast plunge tubs and sauna after heavy sparring rounds are absolute game-changers. No soreness the next morning."</p>
+        <div class="test__person">
+          <div class="test__avatar"><img src="../img/coach-6.jpg" alt="Divya Hegde" /></div>
+          <div>
+            <b>Divya Hegde</b>
+            <i>Member · Boxing &amp; Recovery</i>
+          </div>
+        </div>
+      </article>
+
+      <article class="test">
+        <div class="test__stars">★★★★★</div>
+        <p class="test__quote">"Zero ego, high accountability, and world-class equipment. Best decision I made for functional conditioning."</p>
+        <div class="test__person">
+          <div class="test__avatar"><img src="../img/coach-1.jpg" alt="Rohan Sethi" /></div>
+          <div>
+            <b>Rohan Sethi</b>
+            <i>Member · Combat Cardio &amp; MMA</i>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============== CTA STRIP ============== -->
+  <section class="cta-strip" style="background: linear-gradient(135deg, #0e79b2 0%, #0b5f8a 60%, #191923 100%);">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <span style="display: inline-block; font-family: var(--ff-head); font-size: 11px; letter-spacing: .15em; text-transform: uppercase; color: #d0eaf8; background: rgba(0,0,0,0.25); padding: 5px 16px; border-radius: 999px; margin-bottom: 18px;">DAY PASSES · TRIAL SESSIONS</span>
+      <h2 style="color: #ffffff; margin-bottom: 12px;">Step inside the combat floor.</h2>
+      <p style="color: rgba(255,255,255,0.9); font-size: 17px; margin-bottom: 32px;">
+        Grab your 1-day pass for ₹199. Full access to the cage, barbell rigs, laser speed track, and thermal recovery wing. Gloves and hand wraps provided at the front desk.
+      </p>
+      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <a href="pricing.html" class="btn btn--lg btn--white">Start 1-Day Fighter Pass</a>
+        <a href="schedule.html" class="btn btn--lg btn--hero-outline">View Drill Timetable</a>
+      </div>
+    </div>
+  </section>
+  <!-- ============== FOOTER ============== -->
+  <footer class="ftr">
+
+    <!-- Newsletter CTA Band -->
+    <div class="ftr__cta">
+      <div class="ftr__cta-inner">
+        <div class="ftr__cta-copy">
+          <h3>Stay in the loop.</h3>
+          <p>Training notes, program drops, and Mr Fit news â€” straight to your inbox.</p>
+        </div>
+        <form class="ftr__cta-form" id="footerNewsletterForm">
+          <input type="email" id="footerEmailInput" placeholder="your@email.com" autocomplete="email" />
+          <button type="submit">Join the Dispatch</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Main Footer Body -->
+    <div class="ftr__body">
+      <div class="ftr__main">
+
+        <!-- Brand Block -->
+        <div class="ftr__brand">
+          <a class="hdr__brand" href="../index.html">
+            <span class="hdr__mark">
+              <img src="../assets/logo.png" alt="Mr Fit Logo" />
+            </span>
+            <span class="hdr__name">MR FIT</span>
+          </a>
+          <p class="ftr__brand-tagline">Indiranagar's neighbourhood gym since 2014. No shiny lobby. Just iron, grit, and community.</p>
+          <address class="ftr__address" style="font-style: normal;">
+            <strong>Flagship â€” Indiranagar</strong><br />
+            12th Main Road, 100ft Road, Stage 2<br />
+            Bengaluru, Karnataka 560038<br />
+            <strong>Branch â€” Koramangala</strong><br />
+            80 Feet Road, 6th Block<br />
+            Bengaluru, Karnataka 560095
+          </address>
+          <div class="ftr__socials">
+            <a href="#" class="ftr__social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="ftr__social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="ftr__social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="ftr__social-btn" aria-label="Strava"><i class="fa-brands fa-strava"></i></a>
+          </div>
+        </div>
+
+        <!-- Visit Column -->
+        <div class="ftr__col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Members Column -->
+        <div class="ftr__col">
+          <h4>Members</h4>
+          <ul>
+            <li><a href="../auth/login.html">Member Login</a></li>
+            <li><a href="../auth/signup.html">Join Free Trial</a></li>
+            <li><a href="../auth/user/user-dashboard.html">Member Portal</a></li>
+            <li><a href="../auth/login.html">Reserve a Class</a></li>
+            <li><a href="../auth/login.html">Workout Plans</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Column -->
+        <div class="ftr__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+918012345678">+91 80 1234 5678</a></li>
+            <li><a href="mailto:hello@mrfitbootcamp.com">hello@mrfitbootcamp.com</a></li>
+            <li><a href="contact.html">Visit the Gym</a></li>
+            <li><a href="Privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="Terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Decorative tags divider -->
+    <div class="ftr__divider">
+      <span class="ftr__tag ftr__tag--accent">Est. 2014</span>
+      <span class="ftr__tag">Strength &amp; Conditioning</span>
+      <span class="ftr__tag">Boxing &amp; MMA</span>
+      <span class="ftr__tag">Hydrotherapy</span>
+      <span class="ftr__tag">Personal Training</span>
+      <span class="ftr__tag">Indiranagar Â· Koramangala</span>
+      <span class="ftr__tag">Open 5 AM â€“ 11 PM</span>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="ftr__strip">
+      <span>Â© 2026 Mr Fit Pvt. Ltd. Â· Bengaluru, Karnataka</span>
+      <span style="font-family: var(--ff-head); letter-spacing: .1em; font-size: 10px; color: rgba(255,255,255,.12); text-transform: uppercase;">SQUAT Â· BENCH Â· DEADLIFT</span>
+      <span><a href="Privacy-policy.html">Privacy</a> &nbsp;Â·&nbsp; <a href="Terms-of-service.html">Terms</a></span>
+    </div>
+
+  </footer>
+
+  <script src="../js/navbar.js"></script>
+  <script src="../js/form-validation.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+
+</html>

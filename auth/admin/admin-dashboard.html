@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Staff &amp; Admin Command Center · Mr Fit</title>
+  <meta name="description"
+    content="Back-office management portal for Mr Fit staff. Occupancy telemetry, member roster, revenue metrics, and class schedules." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="../../assets/logo.png" />
+</head>
+
+<body class="page-public dash-page">
+
+  <!-- Mobile Sidebar Backdrop Overlay -->
+  <div class="dash-sidebar-backdrop" id="dashSidebarBackdrop"></div>
+
+  <div class="dash-layout">
+
+    <!-- ============== ADMIN SIDE NAVIGATION BAR ============== -->
+    <aside class="dash-sidebar" id="dashSidebar" aria-label="Staff Command Navigation">
+      
+      <!-- Brand Header -->
+      <div class="dash-sidebar__brand">
+        <a class="hdr__brand" href="../../index.html">
+          <span class="hdr__mark" style="height: auto;">
+            <img src="../../assets/logo.png" alt="Mr Fit Logo" />
+          </span>
+          <span class="hdr__name">MR FIT</span>
+        </a>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <button type="button" class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close navigation sidebar">&times;</button>
+        </div>
+      </div>
+
+      <!-- Admin Profile Mini Widget -->
+      <div class="dash-sidebar__user">
+        <div class="dash-user-avatar" style="background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%); box-shadow: 0 3px 10px rgba(239, 68, 68, 0.3);">
+          VR
+          <span class="online-dot" style="background: #ef4444;" title="Head Administrator active"></span>
+        </div>
+        <div class="dash-user-info">
+          <b>Coach Vikram</b>
+          <span>Head Coach &amp; Floor Admin</span>
+        </div>
+      </div>
+
+      <!-- Navigation Section Groups -->
+      <nav class="dash-sidebar__nav" aria-label="Admin Navigation">
+        
+        <!-- Group 1: Floor Operations -->
+        <div class="dash-nav-group">
+          <span class="dash-nav-group-title">Floor Operations</span>
+          
+          <a href="#occupancy" class="dash-sidebar-nav-item is-active">
+            <i class="fa-solid fa-gauge-high"></i>
+            <span>Live Telemetry</span>
+          </a>
+
+          <a href="#roster" class="dash-sidebar-nav-item">
+            <i class="fa-solid fa-users"></i>
+            <span>Member Directory</span>
+          </a>
+
+          <a href="#classes" class="dash-sidebar-nav-item">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>Class Rosters &amp; Rig Slots</span>
+          </a>
+        </div>
+
+        <!-- Group 2: Management & Portals -->
+        <div class="dash-nav-group">
+          <span class="dash-nav-group-title">Portals &amp; Access</span>
+
+          <a href="../../index.html" class="dash-sidebar-nav-item" title="Go to Mr Fit Public Website">
+            <i class="fa-solid fa-house"></i>
+            <span>Public Website</span>
+          </a>
+
+          <a href="../login.html" class="dash-sidebar-nav-item" title="Sign Out of Admin Console">
+            <i class="fa-solid fa-power-off" style="color: #94a3b8;"></i>
+            <span>Sign Out</span>
+          </a>
+        </div>
+
+      </nav>
+
+      <!-- Sidebar Footer Widget -->
+      <div class="dash-sidebar__footer">
+        <div class="dash-live-occupancy-pill">
+          <div class="live-indicator">
+            <span class="live-pulse"></span>
+            <span>Turnstiles: Nominal</span>
+          </div>
+          <span style="font-weight: 700; font-size: 11px;">Gate Optical OK</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- ============== CONTENT AREA ============== -->
+    <div class="dash-content-area">
+
+      <!-- Sticky Topbar Header -->
+      <header class="dash-topbar">
+        
+        <div class="dash-topbar__left">
+          <!-- Mobile Sidebar Toggle -->
+          <button type="button" class="dash-sidebar-toggle" id="dashSidebarToggle" aria-label="Open sidebar menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <!-- Breadcrumb Path -->
+          <div class="dash-breadcrumb">
+            <span class="dash-breadcrumb-prefix">Staff Console</span>
+            <i class="fa-solid fa-chevron-right" style="font-size: 10px; opacity: 0.5;"></i>
+            <span id="dashBreadcrumbTitle" style="color: var(--orange);">Floor Telemetry &amp; Roster</span>
+          </div>
+        </div>
+
+        <div class="dash-topbar__right">
+         
+
+          <!-- Admin Avatar & Logout -->
+          <div style="display: flex; align-items: center; gap: 8px; padding-left: 8px; border-left: 1px solid rgba(255,255,255,0.12);">
+            <a href="../login.html" style="color: #94a3b8; font-size: 14px; padding: 4px; text-decoration: none;" title="Log Out"><i class="fa-solid fa-power-off"></i></a>
+          </div>
+        </div>
+
+      </header>
+
+      <!-- Main Body Container -->
+      <main class="dash-body">
+    
+    <!-- Top Metrics Row -->
+    <section class="dash-stats-grid">
+      
+      <!-- Metric 1: Live Floor Count -->
+      <div class="dash-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <span style="font-family: var(--ff-head); font-size: 11px; color: var(--gray); text-transform: uppercase;">Live Floor Count</span>
+          <span style="width: 10px; height: 10px; border-radius: 50%; background: #10b981; display: inline-block;"></span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px;">
+          <h3 id="liveFloorCount" style="font-size: 42px; margin: 0; color: var(--navy);">42</h3>
+          <span style="font-size: 13px; color: var(--gray);">/ 75 Max Capacity</span>
+        </div>
+        <div style="width: 100%; height: 6px; background: var(--line); border-radius: 999px; overflow: hidden; margin-bottom: 6px;">
+          <div style="width: 56%; height: 100%; background: #10b981;"></div>
+        </div>
+        <span style="font-size: 11px; color: #10b981; font-weight: 700;">56% Occupancy · Floor Flow Optimal</span>
+      </div>
+
+      <!-- Metric 2: Today's Check-ins -->
+      <div class="dash-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <span style="font-family: var(--ff-head); font-size: 11px; color: var(--gray); text-transform: uppercase;">Today's Check-ins</span>
+          <i class="fa-solid fa-id-card-clip" style="color: var(--orange);"></i>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px;">
+          <h3 style="font-size: 42px; margin: 0; color: var(--navy);">186</h3>
+          <span style="font-size: 12px; color: #10b981; font-weight: 700;"><i class="fa-solid fa-arrow-up"></i> +12%</span>
+        </div>
+        <span style="font-size: 12px; color: var(--gray);">Peak: 06:30 AM – 08:30 AM</span>
+      </div>
+
+      <!-- Metric 3: Active Members -->
+      <div class="dash-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <span style="font-family: var(--ff-head); font-size: 11px; color: var(--gray); text-transform: uppercase;">Active Roster</span>
+          <i class="fa-solid fa-users" style="color: #3b82f6;"></i>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px;">
+          <h3 style="font-size: 42px; margin: 0; color: var(--navy);">348</h3>
+          <span style="font-size: 13px; color: var(--gray);">Athletes</span>
+        </div>
+        <span style="font-size: 12px; color: var(--orange); font-weight: 600;">24 expiring in next 7 days</span>
+      </div>
+
+      <!-- Metric 4: Monthly Revenue (MRR) -->
+      <div class="dash-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <span style="font-family: var(--ff-head); font-size: 11px; color: var(--gray); text-transform: uppercase;">Monthly MRR (Aug)</span>
+          <i class="fa-solid fa-indian-rupee-sign" style="color: #10b981;"></i>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 4px; margin-bottom: 8px;">
+          <h3 style="font-size: 42px; margin: 0; color: var(--navy);">₹12.4<small style="font-size: 20px; color: var(--gray);">L</small></h3>
+        </div>
+        <span style="font-size: 11px; color: #10b981; font-weight: 700;"><i class="fa-solid fa-circle-check"></i> 104% of monthly target</span>
+      </div>
+
+    </section>
+
+    <!-- Center Roster & Schedule Layout -->
+    <div class="dash-split-grid">
+      
+      <!-- Member Roster Table with Live Filtering -->
+      <section id="roster" class="dash-card">
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <p class="eyebrow" style="margin-bottom: 4px;">MANAGEMENT ROSTER</p>
+            <h3 style="margin: 0;">Member Directory</h3>
+          </div>
+
+          <!-- Table Search and Status Filter -->
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <input type="text" id="adminMemberSearch" placeholder="Search name or ID..." style="padding: 10px 14px; border-radius: 8px; border: 1px solid var(--line); font-size: 12px; background: var(--paper); outline: none; width: 160px; max-width: 100%;" />
+            <select id="adminStatusFilter" style="padding: 10px 14px; border-radius: 8px; border: 1px solid var(--line); font-size: 12px; background: var(--paper); outline: none;">
+              <option value="all">All Statuses</option>
+              <option value="active">Active</option>
+              <option value="expiring">Expiring Soon</option>
+              <option value="frozen">Frozen</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table style="width: 100%; min-width: 520px; border-collapse: collapse; text-align: left; font-size: 13px;">
+            <thead>
+              <tr style="background: var(--paper); border-bottom: 2px solid var(--line); font-family: var(--ff-head); font-size: 11px; text-transform: uppercase;">
+                <th style="padding: 12px 14px;">Member Name</th>
+                <th style="padding: 12px 14px;">Member ID</th>
+                <th style="padding: 12px 14px;">Plan Tier</th>
+                <th style="padding: 12px 14px;">Status</th>
+                <th style="padding: 12px 14px; text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="admin-member-row" data-status="active" style="border-bottom: 1px solid var(--line);">
+                <td style="padding: 14px;">
+                  <b style="color: var(--navy); display: block;" class="member-name">Karthik Murthy</b>
+                </td>
+                <td style="padding: 14px; font-weight: 700; color: var(--orange);" class="member-id">NG-0042</td>
+                <td style="padding: 14px; color: var(--gray);">Athletic Pass (Annual)</td>
+                <td style="padding: 14px;"><span style="background: rgba(16,185,129,0.15); color: #10b981; font-family: var(--ff-head); font-size: 10px; padding: 2px 8px; border-radius: 999px; text-transform: uppercase;">Active</span></td>
+                <td style="padding: 14px; text-align: right;"><button class="btn btn--sm btn--outline" style="padding: 4px 10px; font-size: 11px;">Inspect</button></td>
+              </tr>
+              <tr class="admin-member-row" data-status="expiring" style="border-bottom: 1px solid var(--line);">
+                <td style="padding: 14px;">
+                  <b style="color: var(--navy); display: block;" class="member-name">Sneha Reddy</b>
+                </td>
+                <td style="padding: 14px; font-weight: 700; color: var(--orange);" class="member-id">NG-0128</td>
+                <td style="padding: 14px; color: var(--gray);">Iron Floor Monthly</td>
+                <td style="padding: 14px;"><span style="background: rgba(245,158,11,0.15); color: #f59e0b; font-family: var(--ff-head); font-size: 10px; padding: 2px 8px; border-radius: 999px; text-transform: uppercase;">Expiring in 2d</span></td>
+                <td style="padding: 14px; text-align: right;"><button class="btn btn--sm btn--outline" style="padding: 4px 10px; font-size: 11px;">Inspect</button></td>
+              </tr>
+              <tr class="admin-member-row" data-status="frozen">
+                <td style="padding: 14px;">
+                  <b style="color: var(--navy); display: block;" class="member-name">Aditya Krishnan</b>
+                </td>
+                <td style="padding: 14px; font-weight: 700; color: var(--orange);" class="member-id">NG-0549</td>
+                <td style="padding: 14px; color: var(--gray);">Executive PT Pack</td>
+                <td style="padding: 14px;"><span style="background: rgba(59,130,246,0.15); color: #3b82f6; font-family: var(--ff-head); font-size: 10px; padding: 2px 8px; border-radius: 999px; text-transform: uppercase;">Travel Freeze</span></td>
+                <td style="padding: 14px; text-align: right;"><button class="btn btn--sm btn--outline" style="padding: 4px 10px; font-size: 11px;">Inspect</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </section>
+
+      <!-- Right 4 Cols: Class Capacity & Trainer Status -->
+      <section style="display: flex; flex-direction: column; gap: 24px;">
+        
+        <!-- Live Class Capacity -->
+        <div class="dash-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <h4 style="margin: 0;">Upcoming Class Slots</h4>
+            <span style="font-family: var(--ff-head); font-size: 11px; color: var(--orange); text-transform: uppercase;">Today</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
+            <div style="padding: 12px; background: var(--paper); border-radius: 8px; border: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <b style="color: var(--navy); display: block;">Boxing Fundamentals</b>
+                <span style="font-size: 11px; color: var(--gray);">Coach Arjun · 06:30 PM</span>
+              </div>
+              <span style="background: rgba(239,68,68,0.15); color: #ef4444; font-family: var(--ff-head); font-size: 10px; padding: 3px 8px; border-radius: 6px; text-transform: uppercase; font-weight: 800;">FULL (14/14)</span>
+            </div>
+
+            <div style="padding: 12px; background: var(--paper); border-radius: 8px; border: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <b style="color: var(--navy); display: block;">Strength &amp; Barbell</b>
+                <span style="font-size: 11px; color: var(--gray);">Coach Vikram · 07:00 PM</span>
+              </div>
+              <span style="background: rgba(16,185,129,0.15); color: #10b981; font-family: var(--ff-head); font-size: 10px; padding: 3px 8px; border-radius: 6px; text-transform: uppercase; font-weight: 800;">10 / 14 BOOKED</span>
+            </div>
+
+            <div style="padding: 12px; background: var(--paper); border-radius: 8px; border: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <b style="color: var(--navy); display: block;">Muay Thai Sparring</b>
+                <span style="font-size: 11px; color: var(--gray);">Coach Arjun · 07:30 PM</span>
+              </div>
+              <span style="background: rgba(245,158,11,0.15); color: #f59e0b; font-family: var(--ff-head); font-size: 10px; padding: 3px 8px; border-radius: 6px; text-transform: uppercase; font-weight: 800;">12 / 14 BOOKED</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trainer Active Status -->
+        <div class="dash-card">
+          <h4 style="margin-bottom: 16px;">Floor Coaches on Duty</h4>
+          <div style="display: flex; flex-direction: column; gap: 12px; font-size: 13px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="../../img/coach-1.jpg" alt="Coach Vikram" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;" />
+                <b style="color: var(--navy);">Vikram Rao (S&amp;C)</b>
+              </div>
+              <span style="font-size: 11px; color: #10b981; font-weight: 700;">On Rig Floor</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="../../img/coach-2.jpg" alt="Coach Arjun" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;" />
+                <b style="color: var(--navy);">Arjun Gowda (Striking)</b>
+              </div>
+              <span style="font-size: 11px; color: #10b981; font-weight: 700;">In Cage</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="../../img/coach-3.jpg" alt="Coach Sarah" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;" />
+                <b style="color: var(--navy);">Sarah D’Souza (PT)</b>
+              </div>
+              <span style="font-size: 11px; color: #f59e0b; font-weight: 700;">In PT Bay</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+      </main><!-- /.dash-body -->
+    </div><!-- /.dash-content-area -->
+  </div><!-- /.dash-layout -->
+  <script src="../../js/dashboard.js"></script>
+  <script src="../../js/script.js"></script>
+</body>
+
+</html>
